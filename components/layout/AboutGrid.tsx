@@ -160,8 +160,9 @@ export default function AboutGrid() {
 
                 {/* BLOCK 4: DASHED INTERACTIVE BADGE */}
                 <div className="md:col-span-3 p-8 md:p-10 flex flex-col justify-center items-center border-b md:border-b-0 md:border-r border-white/10 min-h-[280px] md:min-h-[380px]">
-                    <motion.div
+                    <motion.a
                         className="w-44 h-44 rounded-full border border-dashed border-white/20 flex flex-col justify-center items-center text-center p-4 relative group cursor-pointer hover:border-white/40 transition-colors"
+                        href="tel:07346459922"
                         initial={{ rotate: -8, opacity: 0 }}
                         whileInView={{ rotate: 0, opacity: 1 }}
                         viewport={{ once: true }}
@@ -172,7 +173,7 @@ export default function AboutGrid() {
                         <div className="absolute bottom-4 w-7 h-7 rounded-full bg-neutral-900 border border-white/10 flex items-center justify-center text-neutral-400 group-hover:bg-white group-hover:text-black transition-all shadow-xl">
                             <Phone className="w-3 h-3" />
                         </div>
-                    </motion.div>
+                    </motion.a>
                 </div>
 
                 {/* BLOCK 5: STADIUM CAPSULE PROMO VIDEO SECTION */}

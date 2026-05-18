@@ -7,6 +7,8 @@ import Image from "next/image";
 import { FaArrowUpRightFromSquare, FaBuilding, FaBuildingShield, FaHouseChimney } from "react-icons/fa6";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import { BsWhatsapp } from "react-icons/bs";
+import WhatsAppButton from "../bits/WhatsAppButton";
 
 interface SplitTextProps {
     text: string;
@@ -154,28 +156,19 @@ export default function LandingPage() {
             </main>
 
             {/* 4. COMPACT BENTO TEXT GRID Block (Replaces old hero cards, following bento design rules) */}
-            <article className="relative z-20 w-full bg-transparent mx-auto py-16 px-4 md:px-8 border-t border-b border-white/[0.08]">
+            <article className="relative z-20 w-full bg-transparent mx-auto py-16 px-4 md:px-8 border-b border-white/[0.08]">
                 <div className="max-w-[1200px] mx-auto flex flex-col items-center justify-center">
 
                     {/* Top Span: Large Commercial & Corporate Hub */}
                     <motion.div
-                        className="w-full pb-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border-b border-white/[0.08]"
+                        className="w-full pb-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 text-center border-b border-white/[0.08]"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                     >
                         <div className="flex flex-col items-start text-left max-w-2xl">
-                            <div className="flex items-center gap-3 mb-3">
-                                <FaBuilding className="w-3.5 h-3.5 text-neutral-500" />
-                                <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-neutral-500">Corporate Scale</span>
-                            </div>
-                            <h4 className="text-xl md:text-2xl font-mono text-white mb-2 uppercase tracking-wide">
-                                Commercial & Corporate Spaces
-                            </h4>
-                            <p className="text-xs md:text-sm text-neutral-400 font-light leading-relaxed">
-                                Shema Cleaning Agency structures high-capacity sanitation operations for commercial towers, enterprise offices, and industrial complexes. We maintain flawless workflows with zero business disruption.
-                            </p>
+                            <WhatsAppButton />
                         </div>
                     </motion.div>
 
@@ -190,18 +183,11 @@ export default function LandingPage() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.1 }}
                         >
-                            <div>
-                                <div className="flex items-center gap-3 mb-3">
-                                    <FaBuildingShield className="w-3.5 h-3.5 text-neutral-500" />
-                                    <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-neutral-500">Business Strategy</span>
-                                </div>
+                            <Link href="mailto:info@example.com">
                                 <h4 className="text-lg font-mono text-white mb-2 uppercase tracking-wide">
-                                    Premium Office Maintenance
+                                    Email Us
                                 </h4>
-                                <p className="text-xs md:text-sm text-neutral-400 font-light leading-relaxed">
-                                    Detailed sanitization tailored for busy workspaces, meeting rooms, and tech hubs. We elevate visual presentation and secure healthy environments for your team.
-                                </p>
-                            </div>
+                            </Link>
                         </motion.div>
 
                         {/* Bottom Right Cell: Luxury Residential Preservation */}
@@ -212,18 +198,11 @@ export default function LandingPage() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.2 }}
                         >
-                            <div>
-                                <div className="flex items-center gap-3 mb-3">
-                                    <FaHouseChimney className="w-3.5 h-3.5 text-neutral-500" />
-                                    <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-neutral-500">Residential Elite</span>
-                                </div>
+                            <Link href="tel:07346459922">
                                 <h4 className="text-lg font-mono text-white mb-2 uppercase tracking-wide">
-                                    High-End Home Cleaning
+                                    Direct Call
                                 </h4>
-                                <p className="text-xs md:text-sm text-neutral-400 font-light leading-relaxed">
-                                    Elite residential care utilizing botanical-based treatments. We preserve premium surfaces, textiles, and domestic layouts with specialized white-glove precision.
-                                </p>
-                            </div>
+                            </Link>
                         </motion.div>
 
                     </div>
