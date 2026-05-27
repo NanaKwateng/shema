@@ -33,7 +33,7 @@ export default function ServiceOverview() {
 
     return (
         <section className="py-32 px-6 max-w-7xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-serif tracking-tight mb-16">Special Servies We Offer</h2>
+            <h2 className="text-3xl md:text-5xl font-serif tracking-tight mb-16">Special Services We Offer</h2>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                 <div className="lg:col-span-5 space-y-4">
